@@ -1,0 +1,36 @@
+body {
+    background: white;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.bi-instagram {
+    height: 15px;
+    width: 15px;
+    margin-bottom: 5px;
+}
+
+.navbar-brand {
+    font-family: 'proxima-nova', 'Niue Helvetian', sans-serif;
+    
+
+}
+
+.feed-container {
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+img {
+    width: 100%;
+}

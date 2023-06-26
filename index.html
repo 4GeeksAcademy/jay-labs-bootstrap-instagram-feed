@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  </head>
+  <body>
+
+    <!-- Top Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>&nbsp;Instagram</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-auto">
+                <!-- Create Post Modal -->
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Create a new post
+                </button>
+                
+                <!-- Modal Mechanics -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col text-start">
+                                Caption:
+                            </div>    
+                            <div class="input-group">
+                                <textarea class="form-control" placeholder="Add the caption of your post here"></textarea>
+                            </div>                            
+                            <div class="row text-start pt-2">
+                                <div class="input mb-3">
+                                    <button type="button" class="btn btn-light border-secondary-subtle">
+                                        <i class="fa-solid fa-camera" style="color: #000000;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" style="svg{fill:#000000;">
+                                                <!-- <style>svg{fill:#000000 !important}</style> -->
+                                                <path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
+                                        </i>
+                                    </button>
+                                    <button type="button" class="btn btn-light border-secondary-subtle">
+                                        <i class="fa-solid fa-camera" style="color: #000000;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                                                <!-- <style>svg{fill:#000000 !important}</style> -->
+                                                <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                                        </i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Gear Logo Dropdown -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>   
+            </div>
+        </div>
+    </nav>
+
+    <!-- Feed Contents -->
+    <div class="feed-container col-sm-12 nav-pills">
+
+        <!-- Tab View Setup -->
+        <ul class="nav nav-underline border-0" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link border-0 text-bg-light" id="gridView" data-bs-toggle="tab" data-bs-target="#gridView-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                    <i class="bi bi-grid-3x3"></i>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active border-0 text-bg-light" id="blockView" data-bs-toggle="tab" data-bs-target="#blockView-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                    <i class="bi bi-square-fill"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content text-center" id="myTabContent">
+
+        <!-- Block View Pane -->
+        <div class="tab-pane fade show active align-middle" id="blockView-pane" role="tabpanel" aria-labelledby="blockView" tabindex="0">            
+            <div class="container text-center">
+                <div class="row">
+                  <div class="col-md-3">
+                  </div>
+
+                  <!-- post #1 -->
+                  <div class="col-md-6">
+                    <div class="card col rounded-1 my-3">
+                        <div class="card-body p-2">
+                            <div class="row">
+                                <div class="col-md-8 text-start fw-bold fs-5">A Wild Land-Hippo has Appeared</div>
+                                <div class="col-md-4 text-end fs-6"><p>2023-06-26</p></div>
+                            </div>
+                        </div>
+                        <div class="m-0 p-0">
+                            <img src="https://wallpapercave.com/wp/wp2048266.jpg" class="card-body m-0 p-0" alt="...">
+                        </div>
+                        <div class="card-body text-start fw-bold fs-6 pt-1 pb-0 px-2">
+                            135 Likes
+                        </div>
+                        <div class="card-body text-start fs-6 pt-1 pb-4 px-2">
+                            I saw this little red nose pitbull in the park.
+                        </div>
+                      </div>
+
+
+
+                  <!-- post #2 -->
+                      <div class="card col rounded-1 my-3">
+                        <div class="card-body p-2">
+                            <div class="row">
+                                <div class="col-md-8 text-start fw-bold fs-5">Floppy Ears Goes to Hollywood</div>
+                                <div class="col-md-4 text-end fs-6"><p>2023-06-11</p></div>
+                            </div>
+                        </div>
+                        <div class="m-0 p-0">
+                            <img src="https://wallpapercave.com/wp/wp2048275.jpg" class="card-body m-0 p-0" alt="...">
+                        </div>
+                        <div class="card-body text-start fw-bold fs-6 pt-1 pb-0 px-2">
+                            501 Likes
+                        </div>
+                        <div class="card-body text-start fs-6 pt-1 pb-4 px-2">
+                            This little pup looks like Adam's dog.
+                        </div>
+                      </div>
+
+
+
+                  <!-- post #3 -->
+                      <div class="card col rounded-1 my-3">
+                        <div class="card-body p-2">
+                            <div class="row">
+                                <div class="col-md-8 text-start fw-bold fs-5">7 Dwarves not found.</div>
+                                <div class="col-md-4 text-end fs-6"><p>2023-06-01</p></div>
+                            </div>
+                        </div>
+                        <div class="m-0 p-0">
+                            <img src="https://wallpapercave.com/wp/wp2048290.jpg" class="card-body m-0 p-0" alt="...">
+                        </div>
+                        <div class="card-body text-start fw-bold fs-6 pt-1 pb-0 px-2">
+                            360 Likes
+                        </div>
+                        <div class="card-body text-start fs-6 pt-1 pb-4 px-2">
+                            Just soaking up the rays. 
+                        </div>
+                      </div>
+
+
+                  <!-- post #4 -->
+                      <div class="card col rounded-1 my-3">
+                        <div class="card-body p-2">
+                            <div class="row">
+                                <div class="col-md-8 text-start fw-bold fs-5">Moseying in the yard</div>
+                                <div class="col-md-4 text-end fs-6"><p>2023-05-28</p></div>
+                            </div>
+                        </div>
+                        <div class="m-0 p-0">
+                            <img src="https://wallpapercave.com/wp/wp2048360.jpg" class="card-body m-0 p-0" alt="...">
+                        </div>
+                        <div class="card-body text-start fw-bold fs-6 pt-1 pb-0 px-2">
+                            12,716 Likes
+                        </div>
+                        <div class="card-body text-start fs-6 pt-1 pb-4 px-2">
+                            "Dad, where did you put my leaf pile?"
+                        </div>
+                      </div>
+
+
+                  <!-- post #5 -->
+                      <div class="card col rounded-1 my-3">
+                        <div class="card-body p-2">
+                            <div class="row">
+                                <div class="col-md-8 text-start fw-bold fs-5">"Do I get a treat for this?"</div>
+                                <div class="col-md-4 text-end fs-6"><p>2023-05-27</p></div>
+                            </div>
+                        </div>
+                        <div class="m-0 p-0">
+                            <img src="https://wallpapercave.com/wp/wp7452771.jpg" class="card-body m-0 p-0" alt="...">
+                        </div>
+                        <div class="card-body text-start fw-bold fs-6 pt-1 pb-0 px-2">
+                            &infin; Likes
+                        </div>
+                        <div class="card-body text-start fs-6 pt-1 pb-4 px-2">
+                            Puppy dog eyes game is on point. Professional beggar here.
+                        </div>
+                      </div>
+
+
+                  <!-- post #6 -->
+                      <div class="card col rounded-1 my-3">
+                        <div class="card-body p-2">
+                            <div class="row">
+                                <div class="col-md-8 text-start fw-bold fs-5">A fresh batch</div>
+                                <div class="col-md-4 text-end fs-6"><p>2023-05-17</p></div>
+                            </div>
+                        </div>
+                        <div class="m-0 p-0">
+                            <img src="https://wallpapercave.com/wp/wp7452770.jpg" class="card-body m-0 p-0" alt="...">
+                        </div>
+                        <div class="card-body text-start fw-bold fs-6 pt-1 pb-0 px-2">
+                            0 Likes (Buy Followers..)
+                        </div>
+                        <div class="card-body text-start fs-6 pt-1 pb-4 px-2">
+                            These little nuggets look like they are fresh out of the oven. 
+                        </div>
+                      </div>
+
+                      
+                  </div>
+                  <div class="col-md-3">
+                  </div>                  
+                </div>
+              </div>
+            
+            
+
+
+
+        </div>
+
+        <!-- Grid View Pane -->
+        <div class="tab-pane fade" id="gridView-pane" role="tabpanel" aria-labelledby="gridView" tabindex="0">
+
+            <div class="container text-center">
+                <div class="row">
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp2048266.jpg" class="img-fluid m-2" alt="...">
+                    </div>
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp2048275.jpg" class="img-fluid m-2" alt="...">
+                    </div>
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp2048290.jpg" class="img-fluid m-2" alt="...">
+                    </div>
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp2048360.jpg" class="img-fluid m-2" alt="...">
+                    </div>
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp7452771.jpg" class="img-fluid m-2" alt="...">
+                    </div>
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp7452770.jpg" class="img-fluid m-2" alt="...">                    </div>
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp2048266.jpg" class="img-fluid m-2" alt="...">
+                    </div>
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp2048266.jpg" class="img-fluid m-2" alt="...">
+                    </div>
+
+                    <div class="col-4">
+                        <img src="https://wallpapercave.com/wp/wp2048266.jpg" class="img-fluid m-2" alt="...">
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
